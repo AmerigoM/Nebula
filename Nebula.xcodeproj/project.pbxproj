@@ -13,6 +13,9 @@
 		16C20936236987DC0066144A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16C20934236987DC0066144A /* Main.storyboard */; };
 		16C20938236987DD0066144A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16C20937236987DD0066144A /* Assets.xcassets */; };
 		16C2093B236987DD0066144A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16C20939236987DD0066144A /* LaunchScreen.storyboard */; };
+		16C209462369AFC90066144A /* NasaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C209452369AFC90066144A /* NasaManager.swift */; };
+		16C209482369B0740066144A /* NasaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C209472369B0740066144A /* NasaData.swift */; };
+		16C2094A2369B5010066144A /* NasaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C209492369B5010066144A /* NasaModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		16C20937236987DD0066144A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16C2093A236987DD0066144A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16C2093C236987DD0066144A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16C209452369AFC90066144A /* NasaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaManager.swift; sourceTree = "<group>"; };
+		16C209472369B0740066144A /* NasaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaData.swift; sourceTree = "<group>"; };
+		16C209492369B5010066144A /* NasaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		16C2092D236987DC0066144A /* Nebula */ = {
 			isa = PBXGroup;
 			children = (
+				16C209442369AFB00066144A /* Model */,
+				16C209422369AF3B0066144A /* View */,
+				16C209432369AF4B0066144A /* Controller */,
 				16C2092E236987DC0066144A /* AppDelegate.swift */,
 				16C20930236987DC0066144A /* SceneDelegate.swift */,
-				16C20932236987DC0066144A /* ViewController.swift */,
-				16C20934236987DC0066144A /* Main.storyboard */,
 				16C20937236987DD0066144A /* Assets.xcassets */,
 				16C20939236987DD0066144A /* LaunchScreen.storyboard */,
 				16C2093C236987DD0066144A /* Info.plist */,
 			);
 			path = Nebula;
+			sourceTree = "<group>";
+		};
+		16C209422369AF3B0066144A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16C20934236987DC0066144A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16C209432369AF4B0066144A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				16C20932236987DC0066144A /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		16C209442369AFB00066144A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16C209452369AFC90066144A /* NasaManager.swift */,
+				16C209472369B0740066144A /* NasaData.swift */,
+				16C209492369B5010066144A /* NasaModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16C209482369B0740066144A /* NasaData.swift in Sources */,
 				16C20933236987DC0066144A /* ViewController.swift in Sources */,
 				16C2092F236987DC0066144A /* AppDelegate.swift in Sources */,
+				16C209462369AFC90066144A /* NasaManager.swift in Sources */,
+				16C2094A2369B5010066144A /* NasaModel.swift in Sources */,
 				16C20931236987DC0066144A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +323,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D25KP5FZHX;
 				INFOPLIST_FILE = Nebula/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +342,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D25KP5FZHX;
 				INFOPLIST_FILE = Nebula/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
