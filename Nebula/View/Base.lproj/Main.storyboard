@@ -52,41 +52,24 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxR-Oo-Cya" userLabel="BottomView">
                                         <rect key="frame" x="0.0" y="668" width="414" height="150"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="u73-qL-Rw2">
-                                                <rect key="frame" x="15" y="15" width="384" height="120"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9k-jH-cDN" userLabel="DownloadButton">
-                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="52.5"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
-                                                        <state key="normal" title="Download">
-                                                            <color key="titleColor" red="0.92549019610000005" green="0.60784313729999995" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="onDownloadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aAY-sH-PmB"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUd-WU-Lh5" userLabel="ShareButton">
-                                                        <rect key="frame" x="0.0" y="67.5" width="384" height="52.5"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
-                                                        <state key="normal" title="Share">
-                                                            <color key="titleColor" red="0.92549019610000005" green="0.60784313729999995" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="onShareImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eiB-Ss-edg"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUd-WU-Lh5" userLabel="ShareButton">
+                                                <rect key="frame" x="157" y="51.5" width="100" height="47"/>
+                                                <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="nzD-hy-8wg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                                <state key="normal" title="Share">
+                                                    <color key="titleColor" red="0.92549019610000005" green="0.60784313729999995" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onShareImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eiB-Ss-edg"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="u73-qL-Rw2" firstAttribute="leading" secondItem="rxR-Oo-Cya" secondAttribute="leading" constant="15" id="DSh-CK-HOe"/>
-                                            <constraint firstAttribute="bottom" secondItem="u73-qL-Rw2" secondAttribute="bottom" constant="15" id="EPd-g7-6DM"/>
-                                            <constraint firstAttribute="trailing" secondItem="u73-qL-Rw2" secondAttribute="trailing" constant="15" id="LnA-ye-MEE"/>
-                                            <constraint firstItem="u73-qL-Rw2" firstAttribute="top" secondItem="rxR-Oo-Cya" secondAttribute="top" constant="15" id="RgK-79-RUd"/>
-                                            <constraint firstItem="u73-qL-Rw2" firstAttribute="centerY" secondItem="rxR-Oo-Cya" secondAttribute="centerY" id="bee-Z6-p4V"/>
-                                            <constraint firstItem="u73-qL-Rw2" firstAttribute="centerX" secondItem="rxR-Oo-Cya" secondAttribute="centerX" id="npQ-Ff-vqs"/>
+                                            <constraint firstItem="yUd-WU-Lh5" firstAttribute="centerX" secondItem="rxR-Oo-Cya" secondAttribute="centerX" id="Q7K-84-1gH"/>
+                                            <constraint firstItem="yUd-WU-Lh5" firstAttribute="centerY" secondItem="rxR-Oo-Cya" secondAttribute="centerY" id="t3Q-TR-pR9"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -108,6 +91,7 @@
                     <connections>
                         <outlet property="imageTitle" destination="Iy7-c7-c48" id="vse-5L-DJW"/>
                         <outlet property="nasaImage" destination="ExW-d5-Mbo" id="UiX-TM-eJn"/>
+                        <outlet property="shareButton" destination="yUd-WU-Lh5" id="hp5-ya-zAB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
