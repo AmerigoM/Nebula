@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class ViewController: UIViewController {
 
@@ -26,6 +27,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onShareImage(_ sender: UIButton) {
+        let share = [nasaImage.image]
+        let activityViewController = UIActivityViewController(activityItems: share as [Any], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
     }
 }
 
