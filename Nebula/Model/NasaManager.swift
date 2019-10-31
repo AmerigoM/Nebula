@@ -16,13 +16,12 @@ protocol NasaManagerDelegate {
 class NasaManager {
     
     let baseUrl = "https://api.nasa.gov/planetary/apod"
-    let apiKey = "u0Pe1o6ajePpsuJehlGWcOKSCHEIVDnPoaqqMYw3"
     
     var delegate: NasaManagerDelegate?
     
     // retrieve the nasa data
-    func fetchImage() {
-        let completeUrl = "\(baseUrl)?api_key=\(apiKey)"
+    func fetchImage(with key: String) {
+        let completeUrl = "\(baseUrl)?api_key=\(key)"
         performRequest(with: completeUrl)
     }
     
